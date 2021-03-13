@@ -17,7 +17,7 @@ class MainActivity : Activity() {
         setContentView(binding.root)
         binding.btHotfix.setOnClickListener {
             binding.btHotfix.isClickable = false
-            val executor = Executors.newSingleThreadExecutor()
+            val executor = Executors.newCachedThreadPool()
             executor.execute {
                 val url = "https://cdn.jsdelivr.net/gh/zsqw123/cdn@master/prj/demoHotfix/hotfix.apk"
                 val connection = URL(url).openConnection() as HttpURLConnection
@@ -30,6 +30,7 @@ class MainActivity : Activity() {
                     runOnUiThread {
                         binding.btHotfix.isClickable = true
                         binding.btHotfix.text = "hotFixed"
+                        app.hotfix()
                     }
                 } else Log.d("-------------", "hotFix Failed")
             }

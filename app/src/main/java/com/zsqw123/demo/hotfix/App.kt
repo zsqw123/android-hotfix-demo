@@ -5,12 +5,12 @@ import dalvik.system.BaseDexClassLoader
 import dalvik.system.DexClassLoader
 import java.io.File
 
-private lateinit var application: Application
+lateinit var app: App
 
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        application = this
+        app = this
         kotlin.runCatching { hotfix() }
     }
 
