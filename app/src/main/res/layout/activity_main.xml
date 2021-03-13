@@ -8,12 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_hotfix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
         android:textColor="#000" />
 
     <Button
+        android:id="@+id/bt_hotfix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hotfix" />
