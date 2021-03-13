@@ -18,6 +18,14 @@
         android:id="@+id/bt_hotfix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hotfix" />
+        android:text="HotfixAll"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bt_hotfix_patch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HotfixPatch"
+        android:textAllCaps="false" />
 
 </LinearLayout>
